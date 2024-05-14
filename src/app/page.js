@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import MovieForm from "../components/MovieForm";
-import MovieList from "../components/MovieList";
+import { useState } from "react";
+import MovieForm from "./components/MovieForm";
+import MovieList from "./components/MovieList";
 
-function HomePage() {
+export default function HomePage() {
   const [movies, setMovies] = useState([]);
 
   const addMovie = (movie) => {
@@ -23,5 +23,3 @@ function HomePage() {
     </div>
   );
 }
-
-export default HomePage;
