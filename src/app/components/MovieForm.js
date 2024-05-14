@@ -32,6 +32,15 @@ export default function MovieForm({ addMovie }) {
         value={movie.director}
         onChange={handleChange}
       />
+      <input
+        type="number"
+        name="rating"
+        placeholder="Rating"
+        value={movie.rating}
+        onChange={handleChange}
+        min="0"
+        max="5"
+      />
       <button type="submit">Add Movie</button>
     </form>
   );
