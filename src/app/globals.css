@@ -38,14 +38,25 @@ select {
 
 .movie-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-flow: row wrap;
   align-items: center;
   margin: 10px 0;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: white;
   border-radius: 5px;
+}
+
+.star-image {
+  width: 20px;
+  height: 20px;
+}
+
+.delete-image {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
