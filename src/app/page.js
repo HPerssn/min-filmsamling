@@ -6,9 +6,13 @@ import MovieSort from "./components/MovieSort";
 
 export default function HomePage() {
   const [movies, setMovies] = useState(() => {
-    const savedMovies = localStorage.getItem("movies");
-    if (savedMovies) {
-      return JSON.parse(savedMovies);
+    if (typeof window !== "undefined") {
+      const savedMovies = localStorage.getItem("movies");
+      if (savedMovies) {
+        return JSON.parse(savedMovies);
+      } else {
+        return [];
+      }
     } else {
       return [];
     }
@@ -29,9 +33,9 @@ export default function HomePage() {
 
   return (
     <div>
-      <MovieSort setMovies={setMovies} movies={movies} />
       <MovieList movies={movies} deleteMovie={deleteMovie} />
       <MovieForm addMovie={addMovie} />
+      <MovieSort setMovies={setMovies} movies={movies} />
     </div>
   );
 }

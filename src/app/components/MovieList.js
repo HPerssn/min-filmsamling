@@ -1,8 +1,8 @@
 export default function MovieList({ movies, deleteMovie }) {
   return (
-    <div>
+    <div className="movie-list">
       {movies.map((movie, index) => (
-        <div key={index}>
+        <div key={index} className="movie-item">
           <h2>{movie.title}</h2>
           <p>{movie.director}</p>
           <p>{movie.rating}</p>
