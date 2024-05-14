@@ -2,6 +2,7 @@
 import { useState } from "react";
 import MovieForm from "./components/MovieForm";
 import MovieList from "./components/MovieList";
+import MovieSort from "./components/MovieSort";
 
 export default function HomePage() {
   const [movies, setMovies] = useState(() => {
@@ -28,6 +29,7 @@ export default function HomePage() {
 
   return (
     <div>
+      <MovieSort setMovies={setMovies} movies={movies} />
       <MovieList movies={movies} deleteMovie={deleteMovie} />
       <MovieForm addMovie={addMovie} />
     </div>
